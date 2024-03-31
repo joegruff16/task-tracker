@@ -1,8 +1,12 @@
 // Retrieve tasks and nextId from localStorage
 let taskList = JSON.parse(localStorage.getItem("tasks"));
 let nextId = JSON.parse(localStorage.getItem("nextId"));
+const toDoEl = $('#to-do');
+const completedEl = $('#done');
+const inProgressEl = $('#in-progress');
 
 // Todo: create a function to generate a unique task id
+// Why are we generating this taskId? What is it for? How does it fit into the big picture of accurately helping to saved/compile tasks?
 function generateTaskId() {
 
 }
@@ -18,12 +22,12 @@ function renderTaskList() {
 }
 
 // Todo: create a function to handle adding a new task
-function handleAddTask(event){
+function handleAddTask(event) {
 
 }
 
 // Todo: create a function to handle deleting a task
-function handleDeleteTask(event){
+function handleDeleteTask(event) {
 
 }
 
