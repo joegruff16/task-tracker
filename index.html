@@ -25,7 +25,17 @@
             <div class="text-center mb-5">
                 <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
             </div>
-            <!-- Todo: Create a modal with a form to add tasks -->
+            <!-- Todo: Create a modal with a form to add tasks - Customize modal from Bootstrap to add below remove this form-->
+            <!-- Button trigger modal -->
+            <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+            >
+                Launch demo modal
+            </button>
+            <!-- Modal with options to enter for tasks of Title, Due Date, and Task Description -->
             <div
                 class="modal fade"
                 id="exampleModal"
@@ -36,59 +46,74 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button
+                            <h5 class="modal-title" id="add-task">Add Task</h5>
+                            <!-- <button
                                 type="button"
                                 class="btn-close"
                                 data-bs-dismiss="modal"
                                 aria-label="Close"
-                            ></button>
+                            ></button> -->
                         </div>
-                        <div class="modal-body"></div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="title" class="col-form-label">Title</label>
+                                    <input type="text" class="form-control" id="title">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="due-date" class="col-form-label">Due Date</label>
+                                    <input type="text" class="form-control" id="taskDueDate">
+                                </label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="task-description" class="col-form-label">Task Description</label>
+                                <input type="text" class="form-control" id="Description">
+                            </div>
+                        </form>
                     </div>
-                </div>
-            </div>
-            <div class="row swim-lanes text-center justify-content-between">
-                <div class="col-12 col-lg-4 d-flex">
-                    <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
-                        <div class="card-header bg-white">
-                            <h2 class="card-title mb-1">To Do</h2>
-                        </div>
-                        <div class="card-body bg-light">
-                            <div id="todo-cards"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 d-flex">
-                    <div id="in-progress" class="card border-light mb-3 lane flex-grow-1">
-                        <div class="card-header bg-white">
-                            <h2 class="card-title mb-1">In Progress</h2>
-                        </div>
-                        <div class="card-body bg-light">
-                            <div id="in-progress-cards"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 d-flex">
-                    <div id="done" class="card border-light mb-3 lane flex-grow-1">
-                        <div class="card-header bg-white">
-                            <h2 class="card-title mb-1">Done</h2>
-                        </div>
-                        <div class="card-body bg-light">
-                            <div id="done-cards"></div>
-                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Add Task</button>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-        <script src="./assets/js/script.js"></script>
-    </body>
+        <div class="row swim-lanes text-center justify-content-between">
+            <div class="col-12 col-lg-4 d-flex">
+                <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
+                    <div class="card-header bg-white">
+                        <h2 class="card-title mb-1">To Do</h2>
+                    </div>
+                    <div class="card-body bg-light">
+                        <div id="todo-cards"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+                <div id="in-progress" class="card border-light mb-3 lane flex-grow-1">
+                    <div class="card-header bg-white">
+                        <h2 class="card-title mb-1">In Progress</h2>
+                    </div>
+                    <div class="card-body bg-light">
+                        <div id="in-progress-cards"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+                <div id="done" class="card border-light mb-3 lane flex-grow-1">
+                    <div class="card-header bg-white">
+                        <h2 class="card-title mb-1">Done</h2>
+                    </div>
+                    <div class="card-body bg-light">
+                        <div id="done-cards"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
 </html>

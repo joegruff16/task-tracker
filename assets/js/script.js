@@ -5,12 +5,20 @@ const toDoEl = $('#to-do');
 const completedEl = $('#done');
 const inProgressEl = $('#in-progress');
 
+// For function 1 - after the add task button is clicked: a modal form will pop up with:
+// title, description, and deadline date
+// Work through the activities and make sure you understand this and when you learn from the activity switch over to the challenge
+// This can be achieved by just imputing the Bootstrap code into HTML to add the modal and form or we can add it with a jQuery function
+// We will need to utilize dayJS to get the function for the deadline date
+// This is like a database with an ID so you want to generate that unique ID for that task; You want to use this ID for every task that you create
 // Todo: create a function to generate a unique task id
-// Why are we generating this taskId? What is it for? How does it fit into the big picture of accurately helping to saved/compile tasks?
+// Use the Math.floor function with the for loop like you have done in prior projects within the for loop you can use 10 or more
 function generateTaskId() {
 
-}
 
+
+}
+// 
 // Todo: create a function to create a task card
 function createTaskCard(task) {
 
