@@ -78,14 +78,31 @@ function renderTaskList(taskCard) {
 
 
 }
-
+// Need to define what a task is
+// We are taking in the input to push through this event
 // Todo: create a function to handle adding a new task
 function handleAddTask(event) {
+    event.preventDefault();
 
+    const task = {
+        id: generateTaskId(),
+        title: $('#title').val(),
+        description: $('#description').val(),
+        dueDate: $('#taskDueDate').val(),
+        status: 'to-do',
+    }
+    taskList.push(task)
+    console.log(taskList)
+    localStorage.setItem("task", JSON.stringify(taskList));
+    renderTaskList()
+    $('#title').val('');
+    $('#description').val('');
+    $('#taskDueDate').val('');
 }
 
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event) {
+
 
 }
 
@@ -99,21 +116,22 @@ $(document).ready(function () {
     // render the task list
     renderTaskList()
 
-// Add Event Listener - will involve the droppable and draggable - grab this syntax from jQuery - like the delete Btn event listener
-// // What precisely is being made draggable? If it's coded dynamically through JS, how do we select the card after they are entered to become draggable?
-// $(function () {
-//     $("#d1").draggable();
-//     // Make lanes droppable
+    // Add Event Listener - will involve the droppable and draggable - grab this syntax from jQuery - like the delete Btn event listener
+    // // What precisely is being made draggable? If it's coded dynamically through JS, how do we select the card after they are entered to become draggable?
+    $('#taskForm').on('submit', handleAddTask)
+    // $(function () {
+    //     $("#d1").draggable();
+    //     // Make lanes droppable
 
-// $( ".selector" ).droppable({
-//     classes: {
-//       "ui-droppable": "highlight"
-//     }
-//   });
+    // $( ".selector" ).droppable({
+    //     classes: {
+    //       "ui-droppable": "highlight"
+    //     }
+    //   });
 
-//     // $(".selector").droppable({
-//     //     accept: ".special"
-//     // });
+    //     // $(".selector").droppable({
+    //     //     accept: ".special"
+    //     // });
 
-//     // Make due date field a date picker
-// });
+    //     // Make due date field a date picker
+});

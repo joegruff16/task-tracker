@@ -23,7 +23,7 @@
         </header>
         <div class="container">
             <div class="text-center mb-5">
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
+                <button class="btn btn-success">Add Task</button>
             </div>
             <!-- Todo: Create a modal with a form to add tasks - Customize modal from Bootstrap to add below remove this form-->
             <!-- Button trigger modal -->
@@ -57,7 +57,7 @@
                             ></button> -->
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form id="taskForm">
                                 <div class="mb-3">
                                     <label for="title" class="col-form-label">Title</label>
                                     <input type="text" class="form-control" id="title">
@@ -69,12 +69,17 @@
                             </div>
                             <div class="mb-3">
                                 <label for="task-description" class="col-form-label">Task Description</label>
-                                <input type="text" class="form-control" id="Description">
+                                <input type="text" class="form-control" id="description">
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Add Task</button>
+                        <button
+                            type="submit"
+                            data-bs-target="#formModal"
+                            data-bs-toggle="modal"
+                            class="btn btn-primary"
+                        >Add Task</button>
                     </div>
                 </div>
             </div>
