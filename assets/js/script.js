@@ -58,7 +58,8 @@ function createTaskCard(task) {
 }
 // Think about how you are going to render this task card
 // Todo: create a function to render the task list and make cards draggable
-function renderTaskList() {
+function renderTaskList(taskCard) {
+
 
 }
 
@@ -83,12 +84,14 @@ $(document).ready(function () {
     renderTaskList()
 
     // Add Event Listener - will involve the droppable and draggable - grab this syntax from jQuery - like the delete Btn event listener
+    // What precisely is being made draggable? If it's coded dynamically through JS, how do we select the card after they are entered to become draggable?
+    $(function () {
+        $("#d1").draggable();
+        // Make lanes droppable
 
-    // Make lanes droppable
+        // $(".selector").droppable({
+        //     accept: ".special"
+        // });
 
-    // $(".selector").droppable({
-    //     accept: ".special"
-    // });
-
-    // Make due date field a date picker
-});
+        // Make due date field a date picker
+    });
