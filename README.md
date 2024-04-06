@@ -8,6 +8,8 @@ This app enables the user to add a task with a title, description and due date. 
 
 ## Finished Product 
 
+!["task-tracker"](./assets/images/task-tracker-screen-shot.png "My task-tracker")
+
 ## Credits
   
   - I used this for help with the draggable and droppable
@@ -20,3 +22,5 @@ MIT see more details in repo
 ## Live Link
 
 ## GitHub Repo
+
+<https://github.com/joegruff16/task-tracker>
