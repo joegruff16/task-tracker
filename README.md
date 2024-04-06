@@ -21,6 +21,8 @@ MIT see more details in repo
 
 ## Live Link
 
+<https://joegruff16.github.io/task-tracker/>
+
 ## GitHub Repo
 
 <https://github.com/joegruff16/task-tracker>
