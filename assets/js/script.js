@@ -33,11 +33,11 @@ function createTaskCard(task) {
     const cardHeader = $('<div>').addClass('card-header h4').text(task.title)
 
     // Create the Body - description and the due date input
-    const cardBody = $('<div>').addClass('card-body')
-    const cardDescription = $('<p>').addClass('card-text').text(task.description)
-    const cardDueDate = $('<p>').addClass('card-text').text(task.dueDate)
-    const cardDeleteBtn = $('<button>').addClass('btn btn-danger delete').text("delete").attr('data-task-id', task.id)
-    cardDeleteBtn.on('click', handleDeleteTask)
+    const cardBody = $('<div>').addClass('card-body');
+    const cardDescription = $('<p>').addClass('card-text').text(task.description);
+    const cardDueDate = $('<p>').addClass('card-text').text(task.dueDate);
+    const cardDeleteBtn = $('<button>').addClass('btn btn-danger delete').text("delete").attr('data-task-id', task.id);
+    cardDeleteBtn.on('click', handleDeleteTask);
     // You need an if statement that would declare the color of the card (red, yellow, or green depending on due date)
     //     if (condition) {
     //         if () {
@@ -102,6 +102,11 @@ function handleAddTask(event) {
 
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event) {
+    const btnDeleteItem = $(event.target);
+    btnDeleteItem.parent('div').remove();
+    // utilize the delete button that was already created above with click event
+
+    // create a click event for the deleteTask button
 
 
 }
