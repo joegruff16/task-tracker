@@ -57,7 +57,7 @@ function createTaskCard(task) {
 // We need to retrieve the data from the taskcard
 // This again is a dynamic rendering from JS to the webpage - what needs to be rendered from the JS code tasklist to the webpage
 // Todo: create a function to render the task list and make cards draggable
-function renderTaskList(event) {
+function renderTaskList() {
 
 
     // // Create Task List
@@ -94,6 +94,11 @@ function handleAddTask(event) {
         dueDate: $('#taskDueDate').val(),
         status: 'to-do',
     }
+
+    if (!taskList) {
+        taskList = []
+    }
+
     taskList.push(task)
     console.log(taskList)
     localStorage.setItem("task", JSON.stringify(taskList));
@@ -110,8 +115,6 @@ function handleDeleteTask(event) {
     // utilize the delete button that was already created above with click event
 
     // create a click event for the deleteTask button
-
-
 }
 
 // Todo: create a function to handle dropping a task into a new status lane
