@@ -39,14 +39,14 @@ function createTaskCard(task) {
     const cardDeleteBtn = $('<button>').addClass('btn btn-danger delete').text("delete").attr('data-task-id', task.id);
     cardDeleteBtn.on('click', handleDeleteTask);
     // You need an if statement that would declare the color of the card (red, yellow, or green depending on due date)
-    //     if (condition) {
-    //         if () {
+    // if (condition) {
+    //     if () {
 
 
-    //         } else {
+    //     } else {
 
-    //         }
     //     }
+    // }
     // append card elements
     cardBody.append(cardDescription, cardDueDate, cardDeleteBtn);
     taskCard.append(cardHeader, cardBody);
@@ -56,7 +56,9 @@ function createTaskCard(task) {
 // Think about how you are going to render this task card
 // This again is a dynamic rendering from JS to the webpage - what needs to be rendered from the JS code tasklist to the webpage
 // Todo: create a function to render the task list and make cards draggable
-function renderTaskList(taskCard) {
+function renderTaskList(event) {
+    event.preventDefault();
+
 
     // Create Task List
     const taskList;
