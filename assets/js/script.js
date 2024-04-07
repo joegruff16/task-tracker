@@ -54,6 +54,7 @@ function createTaskCard(task) {
     return taskCard;
 }
 // Think about how you are going to render this task card
+// We need to retrieve the data from the taskcard
 // This again is a dynamic rendering from JS to the webpage - what needs to be rendered from the JS code tasklist to the webpage
 // Todo: create a function to render the task list and make cards draggable
 function renderTaskList(event) {
@@ -76,7 +77,8 @@ function renderTaskList(event) {
     // Create a lane for done
     const doneLane;
 
-
+    localStorage.getItem("tasks", JSON.parse(taskCard));
+    renderTaskCard()
 
 
 }
