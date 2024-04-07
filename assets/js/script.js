@@ -68,7 +68,15 @@ function renderTaskList() {
     const doneList = $('#done-cards');
     doneList.empty();
 
-    // // Create Task List
+    // The next step is to loop through the taskList and render the appropriate task 
+    // to either the to do column, the in progress column, or the done column.
+    // I need to remember each task has a status attribute, 
+    // this will help us greatly with determining the placement of the task
+    // Then depending on the status of the task, whether it is to do , in progress , or done , 
+    // you'd append the task to either todoList , inProgressList , or doneList
+
+
+    // Create Task List
     // const taskList;
 
     // // Create tasklane - to do, in progress, and done
