@@ -61,24 +61,24 @@ function renderTaskList(event) {
     event.preventDefault();
 
 
-    // Create Task List
-    const taskList;
+    // // Create Task List
+    // const taskList;
 
-    // Create tasklane - to do, in progress, and done
+    // // Create tasklane - to do, in progress, and done
 
-    const taskLane;
+    // const taskLane;
 
-    // Create a lane for to do
-    const toDoLane;
+    // // Create a lane for to do
+    // const toDoLane;
 
-    // Create a lane for in progress
-    const inProgressLane;
+    // // Create a lane for in progress
+    // const inProgressLane;
 
-    // Create a lane for done
-    const doneLane;
+    // // Create a lane for done
+    // const doneLane;
 
-    localStorage.getItem("tasks", JSON.parse(taskCard));
-    renderTaskCard()
+    // localStorage.getItem("tasks", JSON.parse(taskCard));
+    // renderTaskCard()
 
 
 }
