@@ -58,6 +58,11 @@ function createTaskCard(task) {
 // This again is a dynamic rendering from JS to the webpage - what needs to be rendered from the JS code tasklist to the webpage
 // Todo: create a function to render the task list and make cards draggable
 function renderTaskList() {
+    if (!taskList) {
+        taskList = [];
+
+    }
+    // When you deal with an array a loop is always coming
 
     const todoList = $('#todo-cards');
     todoList.empty();
@@ -74,7 +79,18 @@ function renderTaskList() {
     // this will help us greatly with determining the placement of the task
     // Then depending on the status of the task, whether it is to do , in progress , or done , 
     // you'd append the task to either todoList , inProgressList , or doneList
+    for (let task of taskList) {
+        if (task.status === "to-do") {
+            todoList.append(createTaskCard(task))
+        }
+        else if (task.status === "in-progess") {
+            inProgressList.append(createTaskCard(task))
+        }
+        else if (task.status === "done") {
+            doneList.append(createTaskCard(task))
+        }
 
+    }
 
     // Create Task List
     // const taskList;
